@@ -1,3 +1,13 @@
-<div>
-  <img ng-src="{{shot.image_url}}">
+<h2>{{shot.title}}</h2>
+<div class="group">
+  <div class="span8">
+    <img ng-src="{{shot.image_url}}">
+  </div>
+  <div class="span4">
+    <ul>
+      <li><img ng-src="{{shot.player.avatar_url}}" width="50"> {{shot.player.username | uppercase}}</li>
+      <li>{{shot.player.name}}</li>
+      <li>{{shot.created_at | date}}</li>
+    </ul>
+  </div>
 </div>
