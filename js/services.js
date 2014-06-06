@@ -6,6 +6,7 @@ services.factory('dribbble', function($http){
   function load(path, params){
     params = params || {};
     params.callback = "JSON_CALLBACK";
+    params.per_page = "30";
     return $http.jsonp('http://api.dribbble.com/'+path,{params:params});
   }
   return {
